@@ -68,13 +68,26 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam odio voluptates consequuntur accusantium nemo adipisci optio maxime architecto dolor?</p>
+            <p>Fresh graduate lulusan Universitas Indraprasta PGRI jurusan Teknik Informatika dengan 
+              pengalaman membuat aplikasi dengan berbasis java, dan membuat website dengan bahasa program HTML,CSS, dan BOOTSTRAP, saya sedang mencari pekerjaan yang 
+              berhubungan dengan komputer dan terbiasa bekerja secara tim mapun individu</p>
           </div>
           <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim amet exercitationem laudantium odit laborum cumque possimus doloribus deleniti placeat beatae dignissimos quo, ratione tempora repellat?</p>
+          <div class="countainer">
+            <div class="row justify-content-center fs-5">
+            <div class="col-9">kemampuan dan kompetensi</div>
+            <div class="col-4">  <p align="left">▪ Microsoft Office</p>
+                                 <p align="left">▪ HTML</p>    
+                                 <p align="left">▪ CSS</p>
+                                 <p align="left">▪ NetBeans</p></div>
+            <div class="col-6">  <p align="left">▪ Jaringan</p>
+                                 <p align="left">▪ Hardware ,Software</p>
+                                 <p align="left">▪ Java</p></div>
+          </div>
+          </div>    
+          </div>  
           </div>
         </div>
-      </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#8eceff"
@@ -100,7 +113,7 @@
                     <img src="img/myproject1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Nextstore</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">Nextstore merupakan project awal yang saya kembangkan dengan menggukan bahasa program HTML,CSS, dan BOOTSTRAP dengan menampilkan sebuah product sepatu.</p>
                       <a href="http://nextstore.shop" class="btn btn-primary">nextstore</a>
                     </div>
                   </div>
@@ -112,7 +125,7 @@
                     <img src="img/myproject2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Mustakim Travel</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">Mustakim Travel Merupakan project kedua dengan menggunakan bahasa program yang sama dengan project awal yaitu HTML,CSS, dan BOOTSTRAP yang mana untuk menampilkan sebuah paket-paket travel.</p>
                       <a href="http://www.mustakimtravel.shop" class="btn btn-primary">mustakimtravel</a>
                     </div>
                   </div>
@@ -124,7 +137,7 @@
                     <img src="img/myproject3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Ditzstore</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">Ditzstore Merupakan project ketiga dengan menggunakan bahasa program yang sama dengan project yang saya buat yaitu HTML,CSS, dan BOOTSTRAP yang mana sama persis seperti project awal saya untuk menampilkan sebuah product sepatu.</p>
                       <a href="http://www.ditstore.shop" class="btn btn-primary">ditzstore</a>
                     </div>
                   </div>
@@ -148,20 +161,29 @@
             </div>
             <div class="row justify-content-center">
             <div class="col-md-6">
-              <form>
+              <div class="alert alert-success alert-dismissible fade show my-alert d-none" role="alert">
+              <strong>Thank youu!</strong>your message has been received.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <form name="contactme">
                 <div class="mb-3">
                   <label for="name" class="form-label">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name">
+                  <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="email">
+                  <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
                 </div>
                 <div class="mb-3">
                   <label for="pesan" class="form-label">Pesan</label>
-                  <textarea class="form-control" id="pesan" rows="3"></textarea>
+                  <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                 </div>
-                <button type="kirim" class="btn btn-primary">Kirim</button>
+                <button type="kirim" class="btn btn-primary btn-kirim">Kirim</button>
+
+                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Loading...</span>
+                </button>
               </form>
               </div>  
             </div>
@@ -177,5 +199,28 @@
       </footer>
     <!--akhir footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyYqt-8JOUmmvE3BLK5mqRxbbdg4JysL6gjtM7DrzZrhb7G_utl6eAStgg8VYak-6u8VQ/exec'
+  const form = document.forms['contactme'];
+  const btnKirim = document.querySelector('.btn-kirim');
+  const btnLoading = document.querySelector('.btn-loading'); 
+  const myAlert = document.querySelector('.my-alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        myAlert.classList.toggle('d-none');
+        form.reset();
+        console.log('Success!', response)})
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
   </body>
 </html>
